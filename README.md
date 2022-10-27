@@ -18,7 +18,7 @@
   <li><a href="https://github.com/sheerun/vim-polyglot">Vim polyglot</a></li>
   <li><a href="https://github.com/jiangmiao/auto-pairs">Vim Auto pairs</a></li>
   <li><a href="https://github.com/ryanoasis/vim-devicons">vim-devicons</a></li>
-  <li><a href="https://github.com/nvim-telescope/telescope.nvim">vim-devicons</a></li>
+  <li><a href="https://github.com/nvim-telescope/telescope.nvim">Telescope</a></li>
   <li><a href="https://github.com/catppuccin/nvim">Catppuccin theme</a></li>
   <li><a href="https://github.com/nvim-treesitter/nvim-treesitter">Treesitter</a></li>
 </ul>
