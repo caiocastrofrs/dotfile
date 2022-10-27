@@ -1,4 +1,5 @@
 # dotfile
+
 ## Minha configuração pessoal do Neovim
 
 ## Plugins:
@@ -20,4 +21,5 @@
   <li><a href="https://github.com/nvim-telescope/telescope.nvim">Telescope</a></li>
   <li><a href="https://github.com/catppuccin/nvim">Catppuccin theme</a></li>
   <li><a href="https://github.com/nvim-treesitter/nvim-treesitter">Treesitter</a></li>
+  <li><a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a></li>
 </ul>
