@@ -6,7 +6,6 @@
 <ul>
   <li><a href="https://github.com/wbthomason/packer.nvim">Packer</a></li>
   <li><a href="https://github.com/HerringtonDarkholme/yats.vim">TS Syntax Support</a></li>
-  <li><a href="https://github.com/MaxMEllon/vim-jsx-pretty">JS Syntax Support</a></li>
   <li><a href="https://github.com/styled-components/vim-styled-components">Styled-Components support</a></li>
   <li><a href="https://github.com/mattn/emmet-vim">HTML Emmet</a></li>
   <li><a href="https://github.com/neoclide/coc.nvim">CoC</a></li>
