@@ -37,7 +37,7 @@ return require('packer').startup(function()
   	  "catppuccin/nvim",
 	  as = "catppuccin",
 	  config = function()
-  		vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+  		vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 		require("catppuccin").setup()
 		vim.api.nvim_command "colorscheme catppuccin"
 	  end
@@ -58,4 +58,13 @@ return require('packer').startup(function()
 --   For vsnip users.
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+-- Auto tag
+  use {
+    "windwp/nvim-ts-autotag",
+    wants = "nvim-treesitter",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup { enable = true }
+    end,
+  }
 end)

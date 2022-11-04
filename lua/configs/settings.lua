@@ -99,3 +99,8 @@ vim.cmd([[ set completeopt=menu,menuone,noselect ]])
       { name = 'buffer' },
     })
   })
+
+--  Skeleton files config
+--  bash file
+vim.cmd([[autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh]])
+
