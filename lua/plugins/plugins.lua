@@ -1,4 +1,4 @@
-  vim.cmd [[packadd packer.nvim]]
+ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
 --  Packer 
@@ -30,18 +30,22 @@ return require('packer').startup(function()
 --   Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim', 'nvim-telescope/telescope-media-files.nvim'} }
   }
 --  Catppuccin theme
-  use {
-  	  "catppuccin/nvim",
-	  as = "catppuccin",
-	  config = function()
-  		vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
-		require("catppuccin").setup()
-		vim.api.nvim_command "colorscheme catppuccin"
-	  end
-  }
+--  use {
+--  	  "catppuccin/nvim",
+--	  as = "catppuccin",
+--	  config = function()
+--  		vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
+--		require("catppuccin").setup()
+--		vim.api.nvim_command "colorscheme catppuccin"
+--	  end
+--  }
+--  Moonfly themes
+  use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
+--  Nord Nvim 
+  use 'shaunsingh/nord.nvim'
 --  Treesitter
   use {
       'nvim-treesitter/nvim-treesitter',
@@ -58,7 +62,7 @@ return require('packer').startup(function()
 --   For vsnip users.
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
--- Auto tag
+--  Auto tag
   use {
     "windwp/nvim-ts-autotag",
     wants = "nvim-treesitter",
@@ -67,4 +71,10 @@ return require('packer').startup(function()
       require("nvim-ts-autotag").setup { enable = true }
     end,
   }
+--  Neoformat
+  use 'sbdchd/neoformat'
+--  Move nvim
+  use 'fedepujol/move.nvim'
+--  Commentary 
+  use 'tpope/vim-commentary'
 end)

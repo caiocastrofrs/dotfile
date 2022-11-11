@@ -23,4 +23,6 @@
   <li><a href="https://github.com/nvim-treesitter/nvim-treesitter">Treesitter</a></li>
   <li><a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a></li>
   <li><a href="https://github.com/tpope/vim-commentary">commentary-vim</a></li>
+  <li><a href="https://github.com/sbdchd/neoformat">Neoformat</a></li>
+  <li><a href="https://github.com/fedepujol/move.nvim">Move.nvim</a></li>
 </ul>

@@ -20,6 +20,7 @@ syntax on                   " syntax highlighting
 " set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
@@ -28,6 +29,7 @@ set backupdir=~/.cache/vim " Directory to store backup files.
 set t_Co=256    " To enable 256 colors on the terminal.
 set showcmd " Show leader tag 
 set encoding=UTF-8
+set relativenumber
 ]])
 --  Set airline theme
 vim.cmd([[ let g:airline_theme='term' ]])
@@ -59,8 +61,14 @@ require('telescope').setup{
   defaults = { 
     file_ignore_patterns = {
       "node_modules"
-      } 
-  } 
+      }
+
+  },
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
 }
 
 vim.cmd([[ set completeopt=menu,menuone,noselect ]])
@@ -104,3 +112,20 @@ vim.cmd([[ set completeopt=menu,menuone,noselect ]])
 --  bash file
 vim.cmd([[autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh]])
 
+--  Creating a Prettier command
+vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
+
+--  Theme
+--  vim.cmd([[colorscheme moonfly]])
+vim.cmd[[colorscheme nord]]
+-- Setup telescope-media-files
+require'telescope'.setup {
+  extensions = {
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    }
+  },
+}
