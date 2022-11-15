@@ -25,4 +25,6 @@
   <li><a href="https://github.com/tpope/vim-commentary">commentary-vim</a></li>
   <li><a href="https://github.com/sbdchd/neoformat">Neoformat</a></li>
   <li><a href="https://github.com/fedepujol/move.nvim">Move.nvim</a></li>
+  <li><a href="https://github.com/maxmellon/vim-jsx-pretty">Vim JSX Pretty</a></li>
+  <li><a href="https://github.com/yuezk/vim-js">Vim JS</a></li>
 </ul>

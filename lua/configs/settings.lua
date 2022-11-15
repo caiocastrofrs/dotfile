@@ -117,7 +117,9 @@ vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
 
 --  Theme
 --  vim.cmd([[colorscheme moonfly]])
-vim.cmd[[colorscheme nord]]
+--  vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme catppuccin-macchiato]]
+
 -- Setup telescope-media-files
 require'telescope'.setup {
   extensions = {

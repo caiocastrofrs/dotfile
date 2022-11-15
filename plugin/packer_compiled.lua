@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  catppuccin = {
+    config = { "\27LJ\2\nÞ\2\0\0\6\0\17\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0005\3\b\0=\3\t\0026\3\0\0009\3\n\0039\3\v\3'\5\f\0B\3\2\2'\4\r\0&\3\4\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0" },
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -213,6 +219,16 @@ _G.packer_plugins = {
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-js"] = {
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-js",
+    url = "https://github.com/yuezk/vim-js"
+  },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
   ["vim-moonfly-colors"] = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
@@ -241,6 +257,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\nÞ\2\0\0\6\0\17\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0005\3\b\0=\3\t\0026\3\0\0009\3\n\0039\3\v\3'\5\f\0B\3\2\2'\4\r\0&\3\4\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
