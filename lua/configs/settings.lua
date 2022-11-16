@@ -116,10 +116,10 @@ vim.cmd([[autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh]])
 vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
 
 --  Theme
---  vim.cmd([[colorscheme moonfly]])
---  vim.cmd[[colorscheme nord]]
-vim.cmd[[colorscheme catppuccin-macchiato]]
-
+vim.cmd([[colorscheme nord]])
+-- vim.cmd[[colorscheme catppuccin-macchiato]]
+-- transparent bg
+vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 -- Setup telescope-media-files
 require'telescope'.setup {
   extensions = {

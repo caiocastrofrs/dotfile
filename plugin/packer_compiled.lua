@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/jiangmiao/auto-pairs"
   },
   catppuccin = {
-    config = { "\27LJ\2\nÞ\2\0\0\6\0\17\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0005\3\b\0=\3\t\0026\3\0\0009\3\n\0039\3\v\3'\5\f\0B\3\2\2'\4\r\0&\3\4\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0" },
+    config = { "\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\fflavour\14macchiato\16term_colors\1\27transparent_background\2\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0" },
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -129,16 +129,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
-  },
-  nerdtree = {
-    loaded = true,
-    path = "/home/caio/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
-  ["nerdtree-git-plugin"] = {
-    loaded = true,
-    path = "/home/caio/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
-    url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
   },
   ["nord.nvim"] = {
     loaded = true,
@@ -229,11 +219,6 @@ _G.packer_plugins = {
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
-  ["vim-moonfly-colors"] = {
-    loaded = true,
-    path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
-  },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-polyglot",
@@ -243,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-styled-components",
     url = "https://github.com/styled-components/vim-styled-components"
+  },
+  ["vim-vinegar"] = {
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/vim-vinegar",
+    url = "https://github.com/tpope/vim-vinegar"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -259,7 +249,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: catppuccin
 time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\nÞ\2\0\0\6\0\17\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0005\3\b\0=\3\t\0026\3\0\0009\3\n\0039\3\v\3'\5\f\0B\3\2\2'\4\r\0&\3\4\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
+try_loadstring("\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\fflavour\14macchiato\16term_colors\1\27transparent_background\2\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
 time([[Config for catppuccin]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]

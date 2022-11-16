@@ -6,15 +6,11 @@ return require('packer').startup(function()
   --	TS Syntax Support
   use 'HerringtonDarkholme/yats.vim'
   --	Styled-Components support
-  use 'styled-components/vim-styled-components'
+  use { 'styled-components/vim-styled-components', branch = 'main' }
   --	HTML Emmet
   use 'mattn/emmet-vim'
   --	CoC
-  use 'neoclide/coc.nvim'
-  --   NERDTree
-  use 'preservim/nerdtree'
-  --   NERDTree Git Plugin
-  use 'Xuyuanp/nerdtree-git-plugin'
+  use { 'neoclide/coc.nvim', branch = 'release' }
   --   Vim airline
   use 'vim-airline/vim-airline'
   --   Vim airline themes
@@ -40,10 +36,6 @@ return require('packer').startup(function()
       vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
       require("catppuccin").setup({
           flavour = "macchiato", -- latte, frappe, macchiato, mocha
-          background = { -- :h background
-            light = "latte",
-            dark = "mocha",
-          },
           compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
           transparent_background = true,
           term_colors = false,
@@ -55,8 +47,6 @@ return require('packer').startup(function()
         })
     end
   }
-  --  Moonfly themes
-  use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
   --  Nord Nvim 
   use 'shaunsingh/nord.nvim'
   --  Treesitter
@@ -94,4 +84,6 @@ return require('packer').startup(function()
   use 'maxmellon/vim-jsx-pretty'
   --  Hightlight JS Syntax                                                                                                                                                              
   use 'yuezk/vim-js'
+  -- vim-vinegar
+  use 'tpope/vim-vinegar'
 end)

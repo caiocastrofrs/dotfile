@@ -10,8 +10,6 @@
   <li><a href="https://github.com/styled-components/vim-styled-components">Styled-Components support</a></li>
   <li><a href="https://github.com/mattn/emmet-vim">HTML Emmet</a></li>
   <li><a href="https://github.com/neoclide/coc.nvim">CoC</a></li>
-  <li><a href="https://github.com/preservim/nerdtree">NERDTree</a></li>
-  <li><a href="https://github.com/Xuyuanp/nerdtree-git-plugin">NERDTree Git Plugin</a></li>
   <li><a href="https://github.com/vim-airline/vim-airline">Vim airline</a></li>
   <li><a href="https://github.com/vim-airline/vim-airline-themes">Vim airline themes</a></li>
   <li><a href="https://github.com/ap/vim-css-color">Vim css colors</a></li>
@@ -27,4 +25,5 @@
   <li><a href="https://github.com/fedepujol/move.nvim">Move.nvim</a></li>
   <li><a href="https://github.com/maxmellon/vim-jsx-pretty">Vim JSX Pretty</a></li>
   <li><a href="https://github.com/yuezk/vim-js">Vim JS</a></li>
+  <li><a href="https://github.com/tpope/vim-vinegar">Vim vinegar</a></li>
 </ul>

@@ -5,3 +5,7 @@ require("configs.settings")
 require("plugins.plugins")
 -- mappings
 require("mappings.mappings")
+
+
+-- configuration of lsp 
+require'lspconfig'.tsserver.setup {}

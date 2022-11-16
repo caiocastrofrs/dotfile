@@ -1,3 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","html","javascript","typescript","javascriptreact","typescriptreact"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","html","javascript","typescript","javascriptreact","typescriptreact"],
+  "css.lint.duplicateProperties": ["warning"],
+  "css.format.spaceAroundSelectorSeparator": true,
 }
