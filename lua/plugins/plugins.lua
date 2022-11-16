@@ -11,10 +11,6 @@ return require('packer').startup(function()
   use 'mattn/emmet-vim'
   --	CoC
   use { 'neoclide/coc.nvim', branch = 'release' }
-  --   Vim airline
-  use 'vim-airline/vim-airline'
-  --   Vim airline themes
-  use 'vim-airline/vim-airline-themes'
   --   Vim css colors
   use 'ap/vim-css-color'
   --   Vim polyglot
@@ -84,6 +80,11 @@ return require('packer').startup(function()
   use 'maxmellon/vim-jsx-pretty'
   --  Hightlight JS Syntax                                                                                                                                                              
   use 'yuezk/vim-js'
-  -- vim-vinegar
+  --  vim-vinegar
   use 'tpope/vim-vinegar'
+  --  lualine vim
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 end)

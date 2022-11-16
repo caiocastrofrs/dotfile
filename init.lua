@@ -9,3 +9,6 @@ require("mappings.mappings")
 
 -- configuration of lsp 
 require'lspconfig'.tsserver.setup {}
+
+--  lualine
+require("configs.lualine")
