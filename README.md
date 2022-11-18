@@ -27,4 +27,5 @@
   <li><a href="https://github.com/yuezk/vim-js">Vim JS</a></li>
   <li><a href="https://github.com/tpope/vim-vinegar">Vim vinegar</a></li>
   <li><a href="https://github.com/nvim-lualine/lualine.nvim">Nvim lualine</a></li>
+  <li><a href="https://github.com/matbme/JABS.nvim">Nvim JABS</a></li>
 </ul>

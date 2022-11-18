@@ -87,4 +87,12 @@ return require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  --  JABS (Just Another Buffer Switcher)
+  use {
+    "matbme/JABS.nvim",
+    cmd = "JABSOpen",
+    config = function()
+      require("config.jabs").setup()
+    end,
+  }
 end)

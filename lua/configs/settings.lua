@@ -1,7 +1,6 @@
 -- Basic configurations get from this article -> https://medium.com/geekculture/neovim-configuration-for-beginners-b2116dbbde84
 
 vim.cmd([[
-
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -30,9 +29,8 @@ set t_Co=256    " To enable 256 colors on the terminal.
 set showcmd " Show leader tag 
 set encoding=UTF-8
 set relativenumber
+set completeopt=menu,menuone,noselect 
 ]])
---  Set airline theme
-vim.cmd([[ let g:airline_theme='term' ]])
 
 -- coc global extensions
 vim.cmd([[
@@ -61,8 +59,7 @@ require('telescope').setup{
   defaults = { 
     file_ignore_patterns = {
       "node_modules"
-      }
-
+    }
   },
   pickers = {
     find_files = {
@@ -71,12 +68,9 @@ require('telescope').setup{
   }
 }
 
-vim.cmd([[ set completeopt=menu,menuone,noselect ]])
-
 -- Set up nvim-cmp.
-  local cmp = require'cmp'
-
-  cmp.setup({
+local cmp = require'cmp'
+cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
@@ -86,26 +80,26 @@ vim.cmd([[ set completeopt=menu,menuone,noselect ]])
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
-    mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
+     window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+     },
+     mapping = cmp.mapping.preset.insert({
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      }),
     sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'buffer' },
-    })
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' }, -- For vsnip users.
+        -- { name = 'luasnip' }, -- For luasnip users.
+        -- { name = 'ultisnips' }, -- For ultisnips users.
+        -- { name = 'snippy' }, -- For snippy users.
+      }, {
+        { name = 'buffer' },
+      })
   })
 
 --  Skeleton files config
@@ -117,9 +111,7 @@ vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
 
 --  Theme
 vim.cmd([[colorscheme nord]])
--- vim.cmd[[colorscheme catppuccin-macchiato]]
--- transparent bg
-vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
+
 -- Setup telescope-media-files
 require'telescope'.setup {
   extensions = {

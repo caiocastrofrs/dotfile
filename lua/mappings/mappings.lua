@@ -1,5 +1,3 @@
---  Map NERDTree Toggle
-vim.cmd([[nmap <leader>nt :NERDTreeToggle<CR>]])
 --  Map Telescope find_files
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

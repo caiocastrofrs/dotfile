@@ -12,3 +12,6 @@ require'lspconfig'.tsserver.setup {}
 
 --  lualine
 require("configs.lualine")
+
+-- jabs
+require("configs.jabs")
