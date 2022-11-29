@@ -28,4 +28,5 @@
   <li><a href="https://github.com/tpope/vim-vinegar">Vim vinegar</a></li>
   <li><a href="https://github.com/nvim-lualine/lualine.nvim">Nvim lualine</a></li>
   <li><a href="https://github.com/matbme/JABS.nvim">Nvim JABS</a></li>
+  <li><a href="https://github.com/akinsho/git-conflict.nvim">Conflict nvim</a></li>
 </ul>
