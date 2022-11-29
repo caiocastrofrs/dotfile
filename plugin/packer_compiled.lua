@@ -83,13 +83,8 @@ _G.packer_plugins = {
     path = "/home/caio/.local/share/nvim/site/pack/packer/opt/JABS.nvim",
     url = "https://github.com/matbme/JABS.nvim"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/home/caio/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   catppuccin = {
-    config = { "\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\fenabled\1\nshade\tdark\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\fflavour\14macchiato\16term_colors\1\27transparent_background\2\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0" },
+    config = { "\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0" },
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -129,6 +124,12 @@ _G.packer_plugins = {
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["git-conflict.nvim"] = {
+    config = { "\27LJ\2\n²\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\rincoming\rDiffText\fcurrent\fDiffAdd\1\0\3\21default_commands\2\21default_mappings\2\24disable_diagnostics\1\nsetup\17git-conflict\frequire\0" },
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/git-conflict.nvim",
+    url = "https://github.com/akinsho/git-conflict.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -148,6 +149,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/caio/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/caio/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -257,10 +264,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: git-conflict.nvim
+time([[Config for git-conflict.nvim]], true)
+try_loadstring("\27LJ\2\n²\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\rincoming\rDiffText\fcurrent\fDiffAdd\1\0\3\21default_commands\2\21default_mappings\2\24disable_diagnostics\1\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
+time([[Config for git-conflict.nvim]], false)
 -- Config for: catppuccin
 time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\fenabled\1\nshade\tdark\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\fflavour\14macchiato\16term_colors\1\27transparent_background\2\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
+try_loadstring("\27LJ\2\n±\2\0\0\6\0\15\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0006\3\0\0009\3\b\0039\3\t\3'\5\n\0B\3\2\2'\4\v\0&\3\4\3=\3\f\0025\3\r\0=\3\14\2B\0\2\1K\0\1\0\17dim_inactive\1\0\3\nshade\tdark\fenabled\1\15percentage\4³æÌ™\3³æŒþ\3\17compile_path\16/catppuccin\ncache\fstdpath\afn\1\0\3\16term_colors\1\27transparent_background\2\fflavour\14macchiato\nsetup\15catppuccin\frequire\nlatte\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
 time([[Config for catppuccin]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

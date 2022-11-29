@@ -1,17 +1,11 @@
-print("Olá, Caio!");
--- basic configuration
-require("configs.settings")
--- plugins
+-- CONFIG
+require("configs.index");
+
+-- PLUGINS
 require("plugins.plugins")
--- mappings
-require("mappings.mappings")
 
+-- MAPPINGS
+require("mappings.index")
 
--- configuration of lsp 
+-- configuration of LSP 
 require'lspconfig'.tsserver.setup {}
-
---  lualine
-require("configs.lualine")
-
--- jabs
-require("configs.jabs")
