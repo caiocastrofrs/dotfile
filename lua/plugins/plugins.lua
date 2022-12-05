@@ -3,10 +3,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   --  Packer 
   use 'wbthomason/packer.nvim'
-  --	TS Syntax Support
-  use 'HerringtonDarkholme/yats.vim'
-  --	Styled-Components support
-  use { 'styled-components/vim-styled-components', branch = 'main' }
   --	HTML Emmet
   use 'mattn/emmet-vim'
   --	CoC
@@ -15,8 +11,6 @@ return require('packer').startup(function()
   use 'ap/vim-css-color'
   --   Vim polyglot
   use 'sheerun/vim-polyglot'
-  --   Vim Auto pairs
-  -- use 'jiangmiao/auto-pairs'
   --   vim-devicons
   use 'ryanoasis/vim-devicons'
   --   Telescope
@@ -87,14 +81,6 @@ return require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  --  JABS (Just Another Buffer Switcher)
-  use {
-    "matbme/JABS.nvim",
-    cmd = "JABSOpen",
-    config = function()
-      require("config.jabs").setup()
-    end,
-  }
   -- Auto pairs
   use {
     "windwp/nvim-autopairs",
@@ -112,5 +98,15 @@ return require('packer').startup(function()
           current = 'DiffAdd',
         }
       })
-    end}
-  end)
+  end
+}
+
+  -- rnvimr
+  use 'kevinhwang91/rnvimr'
+
+  -- Vim rose pine theme 
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+})
+end)

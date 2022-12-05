@@ -15,3 +15,9 @@ require("configs.telescope")
 require("configs.theme")
 
 require("configs.autopairs")
+
+require("configs.conflict")
+
+require("configs.rnvimr")
+
+require("configs.rosepine")
