@@ -20,4 +20,4 @@ require("configs.conflict")
 
 require("configs.rnvimr")
 
-require("configs.rosepine")
+require("configs.zenmode")

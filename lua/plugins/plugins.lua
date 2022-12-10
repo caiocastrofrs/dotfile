@@ -16,29 +16,14 @@ return require('packer').startup(function()
   --   Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim', 'nvim-telescope/telescope-media-files.nvim'} }
+    requires = { 
+      {
+        'nvim-lua/plenary.nvim', 
+        'nvim-lua/popup.nvim', 
+        'nvim-telescope/telescope-media-files.nvim',
+      } 
+    } 
   }
-  --  Catppuccin theme
-  use {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function()
-      vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
-      require("catppuccin").setup({
-          flavour = "macchiato", -- latte, frappe, macchiato, mocha
-          compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
-          transparent_background = true,
-          term_colors = false,
-          dim_inactive = {
-            enabled = false,
-            shade = "dark",
-            percentage = 0.15,
-          }
-        })
-    end
-  }
-  --  Nord Nvim 
-  use 'shaunsingh/nord.nvim'
   --  Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -100,13 +85,12 @@ return require('packer').startup(function()
       })
   end
 }
-
-  -- rnvimr
-  use 'kevinhwang91/rnvimr'
-
-  -- Vim rose pine theme 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-})
+-- rnvimr
+use 'kevinhwang91/rnvimr'
+-- Zen mode
+use {
+  "folke/zen-mode.nvim"
+}
+--   Tender theme
+use 'jacoborus/tender.vim'
 end)

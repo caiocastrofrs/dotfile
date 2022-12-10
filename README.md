@@ -25,5 +25,6 @@
   <li><a href="https://github.com/nvim-lualine/lualine.nvim">Nvim lualine</a></li>
   <li><a href="https://github.com/akinsho/git-conflict.nvim">conflict nvim</a></li>
   <li><a href="https://github.com/kevinhwang91/rnvimr">rnvimr</a></li>
-  <li><a href="https://github.com/rose-pine/neovim">Rose Pine theme</a></li>
+  <li><a href="https://github.com/folke/zen-mode.nvim">Zen Mode</a></li>
+  <li><a href="https://github.com/jacoborus/tender.vim">Tender theme</a></li>
 </ul>
