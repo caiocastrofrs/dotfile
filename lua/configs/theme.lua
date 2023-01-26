@@ -1,3 +1,10 @@
---  Theme
-vim.cmd([[colorscheme tender]])
-vim.cmd([[autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE]])
+function ColorMyPencils(color)
+  color = color or "rose-pine"
+  vim.cmd.colorscheme(color)
+
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
+
+end
+
+ColorMyPencils()

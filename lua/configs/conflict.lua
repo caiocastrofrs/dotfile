@@ -17,4 +17,4 @@ for event, opt_tbls in pairs(aucmd_dict) do
     for _, opt_tbl in pairs(opt_tbls) do
         vim.api.nvim_create_autocmd(event, opt_tbl)
     end
-end 
+end

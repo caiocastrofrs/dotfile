@@ -1,6 +1,6 @@
 --  Telescope configs
-require('telescope').setup{ 
-  defaults = { 
+require('telescope').setup{
+  defaults = {
     file_ignore_patterns = {
       "node_modules",
       "node%_modules/.*"
@@ -16,7 +16,7 @@ require('telescope').setup{
       -- filetypes whitelist
       -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
       filetypes = {"png", "webp", "jpg", "jpeg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
+      find_cmd = "rg", -- find command (defaults to `fd`)
     },
   },
 }

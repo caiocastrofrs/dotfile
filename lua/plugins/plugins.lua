@@ -1,96 +1,136 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  --  Packer 
+  --  Packer
   use 'wbthomason/packer.nvim'
+
   --	HTML Emmet
   use 'mattn/emmet-vim'
-  --	CoC
-  use { 'neoclide/coc.nvim', branch = 'release' }
+
   --   Vim css colors
   use 'ap/vim-css-color'
-  --   Vim polyglot
-  use 'sheerun/vim-polyglot'
-  --   vim-devicons
-  use 'ryanoasis/vim-devicons'
+
   --   Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { 
+    requires = {
       {
-        'nvim-lua/plenary.nvim', 
-        'nvim-lua/popup.nvim', 
-        'nvim-telescope/telescope-media-files.nvim',
-      } 
-    } 
+        'nvim-lua/plenary.nvim',
+        'nvim-lua/popup.nvim',
+        'nvim-telescope/telescope-media-files.nvim'
+      }
+    }
   }
+
   --  Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, 
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  --  vim-cmp auto-complete
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
 
-  --   For vsnip users.
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-  --  Auto tag
-  use {
-    "windwp/nvim-ts-autotag",
-    wants = "nvim-treesitter",
-    event = "InsertEnter",
-    config = function()
-      require("nvim-ts-autotag").setup { enable = true }
-    end,
-  }
-  --  Neoformat
-  use 'sbdchd/neoformat'
-  --  Move nvim
-  use 'fedepujol/move.nvim'
-  --  Commentary 
+  --  Commentary
   use 'tpope/vim-commentary'
-  --  Hightlight JSX Syntax
+
+  --  Highlight JSX Syntax
   use 'maxmellon/vim-jsx-pretty'
-  --  Hightlight JS Syntax                                                                                                                                                              
+
+  --  Highlight JS Syntax
   use 'yuezk/vim-js'
+
   --  vim-vinegar
   use 'tpope/vim-vinegar'
+
   --  lualine vim
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
   -- Auto pairs
   use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-  } 
+  }
 
   -- Git conflict
-  use {'akinsho/git-conflict.nvim', tag = "*", config = function()
+  use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
     require('git-conflict').setup({
-        default_mappings = true, -- disable buffer local mapping created by this plugin
-        default_commands = true, -- disable commands created by this plugin
-        disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
-        highlights = { -- They must have background color, otherwise the default color will be used
-          incoming = 'DiffText',
-          current = 'DiffAdd',
-        }
-      })
+      default_mappings = true, -- disable buffer local mapping created by this plugin
+      default_commands = true, -- disable commands created by this plugin
+      disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
+      highlights = { -- They must have background color, otherwise the default color will be used
+        incoming = 'DiffText',
+        current = 'DiffAdd',
+      }
+    })
   end
-}
--- rnvimr
-use 'kevinhwang91/rnvimr'
--- Zen mode
-use {
-  "folke/zen-mode.nvim"
-}
---   Tender theme
-use 'jacoborus/tender.vim'
+  }
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
+    }
+  }
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+
+  use { 'nvim-tree/nvim-web-devicons' }
+
+  use {
+    'rose-pine/neovim',
+    as = 'rose-pine'
+  }
+
+  use { 'theprimeagen/harpoon' }
+
+  use { 'mbbill/undotree' }
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  use 'folke/lsp-colors.nvim'
+
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
+
+  -- nvim-ts-rainbow
+  use { "mrjones2014/nvim-ts-rainbow" }
+
+  -- git diff
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- tagalong.vim
+  use { 'AndrewRadev/tagalong.vim' }
+
+  -- move 
+  use 'ur4ltz/move.nvim'
 end)

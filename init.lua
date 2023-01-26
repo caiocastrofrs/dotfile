@@ -1,11 +1,8 @@
--- CONFIG
-require("configs.index");
+-- CONFIGS
+require("configs.init");
 
 -- PLUGINS
 require("plugins.plugins")
 
 -- MAPPINGS
-require("mappings.index")
-
--- configuration of LSP 
-require'lspconfig'.tsserver.setup {}
+require("mappings.init")

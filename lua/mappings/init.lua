@@ -4,8 +4,8 @@ require("mappings.prettier")
 
 require("mappings.telescope")
 
-require("mappings.rnvimr")
-
-require("mappings.zenmode")
-
 require("mappings.trouble")
+
+require("mappings.undotree")
+
+require("mappings.nerdtree")

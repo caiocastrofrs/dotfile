@@ -4,8 +4,6 @@ require("configs.lsp-zero")
 
 require("configs.trouble")
 
-require("configs.jabs")
-
 require("configs.lualine")
 
 require("configs.settings")
@@ -18,6 +16,10 @@ require("configs.autopairs")
 
 require("configs.conflict")
 
-require("configs.rnvimr")
+require("configs.harpoon")
 
-require("configs.zenmode")
+require("configs.nerdtree")
+
+require("configs.no-neck-pain")
+
+require("configs.nvim-ts-rainbow")

@@ -4,12 +4,12 @@ vim.cmd([[
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
-set hlsearch                " highlight search 
+" set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=2               " number of columns occupied by a tab 
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
-set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
+set expandtab               " converts tabs to white space
 set autoindent              " indent a new line the same amount as the line just typed
 set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   "allow auto-indenting depending on file type
@@ -25,8 +25,13 @@ set encoding=UTF-8
 set completeopt=menu,menuone,noselect
 set number
 set relativenumber
+set mouse=a
+set background=dark
 ]])
 
+vim.cmd [[ nnoremap <SPACE> <Nop> ]]
+vim.g.mapleader = " "
+vim.opt.updatetime = 50
 
 --  Auto PackerCompile when a new installation occur
 vim.cmd([[
@@ -36,8 +41,8 @@ vim.cmd([[
   augroup end
 ]])
 
-
-
 --  Skeleton files config
 --  bash file
 vim.cmd([[autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh]])
+
+vim.opt.signcolumn = 'yes'
