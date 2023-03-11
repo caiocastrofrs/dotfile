@@ -1,0 +1,22 @@
+return {
+  'jaredgorski/SpaceCamp',
+  'jaredgorski/fogbell.vim',
+  'bluz71/vim-moonfly-colors',
+  'sts10/vim-pink-moon',
+  'jascha030/nitepal.nvim',
+  'haoyu953/pride.vim',
+  'nyoom-engineering/nyoom.nvim',
+  'jacoborus/tender.vim',
+  'loctvl842/monokai-pro.nvim',
+  'askfiy/visual_studio_code',
+  'KabbAmine/yowish.vim',
+  'nyoom-engineering/oxocarbon.nvim',
+  'jdsimcoe/abstract.vim',
+  'tlhr/anderson.vim',
+  'romainl/Apprentice',
+  'ayu-theme/ayu-vim',
+  'catppuccin/vim',
+  'cocopon/iceberg.vim',
+  'shaunsingh/nord.nvim',
+  'NTBBloodbath/sweetie.nvim'
+}
