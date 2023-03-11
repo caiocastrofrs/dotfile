@@ -3,7 +3,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
       "git",
-		"clone",
+  	"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable", -- latest stable release
@@ -16,10 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("lazy").setup('plugins')
-
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+
+require("lazy").setup('plugins')
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -35,6 +35,7 @@ vim.g.incsearch = true
 
 -- Automatically insert tabs or spaces based on context
 vim.g.smarttab = true
+
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -57,17 +58,22 @@ vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
+-- Change highlight color
+vim.cmd [[
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+]]
+
 -- set tab width
 vim.cmd [[
-set tabstop=2
-set shiftwidth=2
-set expandtab
+  set tabstop=2
+  set shiftwidth=2
+  set expandtab
 ]]
 
 -- Set colorscheme
-vim.cmd [[ colorscheme onedark ]]
-
--- vim.o.termguicolors = true
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd [[ colorscheme nord ]]
+vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -105,9 +111,37 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Format on Save
 vim.cmd [[ autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js Eslint ]]
 
--- Inline error
+-- Clean all buffers
+vim.keymap.set('n', '<leader>bo', '<cmd>%bd|e#<cr>', { desc='Close all buffers but the current one'})
+
+-- -- Inverse cursor color
+vim.cmd('highlight Cursor guibg=white guifg=black')
+
+vim.cmd [[
+  highlight! Cursor guifg=#665c54 guibg=white
+  highlight! CursorLineNr guifg=white guibg=#665c54
+  highlight! Visual guifg=white guibg=#665c54
+  highlight! IncSearch guifg=#665c54 guibg=yellow
+  highlight! Search guifg=white guibg=#665c54
+  highlight! StatusLine guifg=#665c54 guibg=white
+  highlight! StatusLineNC guifg=#665c54 guibg=white
+]]
+
+-- Enable LSP diagnostics virtual text
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false
-    }
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = {
+      prefix = "●",
+      spacing = 4,
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+  }
 )
+
+-- Customize virtual text colors based on severity
+vim.cmd('highlight LspDiagnosticsVirtualTextError guifg=#f92672')
+vim.cmd('highlight LspDiagnosticsVirtualTextWarning guifg=#fd971f')
+vim.cmd('highlight LspDiagnosticsVirtualTextInformation guifg=#66d9ef')
+vim.cmd('highlight LspDiagnosticsVirtualTextHint guifg=#b6e1f3')
