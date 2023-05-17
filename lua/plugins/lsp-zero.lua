@@ -28,6 +28,7 @@ return {
       set_lsp_keymaps = true, -- set to false if you want to configure your own keybindings
       manage_nvim_cmp = true, -- set to false if you want to configure nvim-cmp on your own
     })
+    lsp.setup_servers({'tsserver','eslint','typescriptreact','javascriptreact'})
     -- (Optional) Configure lua language server for neovim
     -- lsp.nvim_workspace()
     lsp.setup()

@@ -1,0 +1,3 @@
+return {
+  'haxibami/urara.vim'
+}

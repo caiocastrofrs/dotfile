@@ -7,7 +7,6 @@ return {
   'haoyu953/pride.vim',
   'nyoom-engineering/nyoom.nvim',
   'jacoborus/tender.vim',
-  'loctvl842/monokai-pro.nvim',
   'askfiy/visual_studio_code',
   'KabbAmine/yowish.vim',
   'nyoom-engineering/oxocarbon.nvim',

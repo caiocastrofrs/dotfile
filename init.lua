@@ -48,7 +48,7 @@ vim.cmd [[ highlight CursorLine guibg=grey ]]
 vim.o.breakindent = true
 
 -- Save undo history
-vim.o.undofile = true
+vim .o.undofile = true
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -72,7 +72,7 @@ vim.cmd [[
 
 -- Set colorscheme
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd [[ colorscheme nord ]]
+vim.cmd [[ colorscheme visual_studio_code_dark ]]
 vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience
@@ -98,7 +98,7 @@ vim.cmd [[
 
 
 -- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
+-- See `:help vim.highlight.on_yank`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function()
@@ -145,3 +145,7 @@ vim.cmd('highlight LspDiagnosticsVirtualTextError guifg=#f92672')
 vim.cmd('highlight LspDiagnosticsVirtualTextWarning guifg=#fd971f')
 vim.cmd('highlight LspDiagnosticsVirtualTextInformation guifg=#66d9ef')
 vim.cmd('highlight LspDiagnosticsVirtualTextHint guifg=#b6e1f3')
+
+vim.opt.laststatus=3
+
+vim.cmd[[ set hidden ]]
